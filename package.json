@@ -1,0 +1,31 @@
+{
+  "name": "ast-css-iter",
+  "version": "0.0.1",
+  "description": "A simple API for iteration on CSS abstract tree",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dophuan/ast-css-iter.git"
+  },
+  "keywords": [
+    "css",
+    "parser",
+    "stylesheets",
+    "ast"
+  ],
+  "author": "Do Phu An",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dophuan/ast-css-iter/issues"
+  },
+  "homepage": "https://github.com/dophuan/ast-css-iter#readme",
+  "devDependencies": {
+    "eslint": "^7.7.0"
+  },
+  "dependencies": {
+    "css": "^3.0.0"
+  }
+}
