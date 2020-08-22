@@ -1,3 +1,5 @@
+const findDeclarationsByValue = require("./findDeclarationsByValue");
+
 const findDeclarations = (rulesRoot) => {
     const isObject = typeof rulesRoot === 'object'
 
@@ -15,3 +17,5 @@ const findDeclarations = (rulesRoot) => {
         });      
     }
 }
+
+module.exports = findDeclarations
