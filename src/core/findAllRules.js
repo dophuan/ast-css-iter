@@ -1,14 +1,10 @@
 const findAllRules = (rulesRoot) => {
     const isObject = typeof rulesRoot === 'object'
     const rules = rulesRoot.stylesheet.rules
-
     if (!rulesRoot.findAllRules && isObject) {
-
-        rulesRoot.findAllRules = () => {
-            return new Promise((resolve) => {
-                rules.forEach(function (rule, index) {
-                    return resolve(rule, index)
-                })
+        rulesRoot.findAllRules = (callback) => {
+            rules.forEach((rule, indexRule) => {
+                return callback(rule, indexRule)
             })
         }
     }
