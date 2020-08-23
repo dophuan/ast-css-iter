@@ -22,6 +22,7 @@ describe('findDeclarations()', () => {
     `)
 
         findAllRulesByType(ast)
+        // console.log(ast.stylesheet.rules)
         findDeclarations(ast)
 
         const result = []
