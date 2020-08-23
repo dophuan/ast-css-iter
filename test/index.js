@@ -1,8 +1,15 @@
 require('./addRules.test')
 require('./findAllRules.test')
+require('./findAllRulesBySelectors.test')
+require('./findAllRulesByType.test')
 
 require('./addDeclarations.test')
 require('./findDeclarations.test')
 require('./findDeclarationsByProperty.test')
 require('./findDeclarationsBySelectors.test')
 require('./findDeclarationsByValue.test')
+
+require('./getAllDeclarations.test')
+require('./getAllDeclarationsByProperty.test')
+require('./getAllDeclarationsBySelectors.test')
+require('./getAllDeclarationsByValue.test')
