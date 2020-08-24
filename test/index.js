@@ -15,3 +15,5 @@ require('./getAllDeclarationsBySelector.test')
 require('./getAllDeclarationsByValue.test')
 require('./removeDeclaration.test')
 require('./removeRule.test')
+
+require('./getParam.test')
