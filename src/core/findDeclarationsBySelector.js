@@ -1,19 +1,19 @@
-const findDeclarationsBySelectors = (rulesRoot) => {
+const findDeclarationsBySelector = (rulesRoot) => {
     const isObject = typeof rulesRoot === 'object'
 
-    if (!rulesRoot.findDeclarationsBySelectors && isObject) {
+    if (!rulesRoot.findDeclarationsBySelector && isObject) {
         const rules = rulesRoot.stylesheet.rules
 
         rules.forEach((rule) => {
             if (rule.type === 'rule') {
-                rule.findDeclarationsBySelectors = function (selectors, callback) {
+                rule.findDeclarationsBySelector = function (selectors, callback) {
                     if ('' + rule.selectors === selectors) {
                         rule.declarations.forEach((declaration, index) => {
                             callback(declaration, index)
                         })
                     }
                 }
-                // rule.findDeclarationsBySelectors = selectors => {
+                // rule.findDeclarationsBySelector = selectors => {
                 //     return new Promise((resolve) => {
                 //         if ('' + rule.selectors === selectors) {
                 //             rule.declarations.forEach((declaration, declarationIndex) => {
@@ -27,4 +27,4 @@ const findDeclarationsBySelectors = (rulesRoot) => {
     }
 }
 
-module.exports = findDeclarationsBySelectors
+module.exports = findDeclarationsBySelector

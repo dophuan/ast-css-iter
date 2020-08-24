@@ -1,37 +1,34 @@
 const assert = require('assert')
 const css = require('css')
-const findAllRulesByType = require('../src/core/findAllRulesByType')
-const findDeclarationsBySelectors = require('../src/core/findDeclarationsBySelectors')
+const getAllRulesByType = require('../src/core/getAllRulesByType')
+const findDeclarationsBySelector = require('../src/core/findDeclarationsBySelector')
 
-describe('findDeclarationsBySelectors()', () => {
+describe('findDeclarationsBySelector()', () => {
+  it('Should return iterations in a list of declarations ' +
+    '(filtered by selectors)', () => {
 
-    // --------------------------
-
-    it('Should return iterations in a list of declarations ' +
-        '(filtered by selectors)', () => {
-
-            const ast = css.parse(`
-      @import module.css;
-      .a {
-        width: 10px;
-        height: 100%;
+      const ast = css.parse(`
+      .truncated-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       /* comment */
       .b {
         color: #000;
       }
     `)
-            findAllRulesByType(ast)
-            findDeclarationsBySelectors(ast)
+      getAllRulesByType(ast)
+      findDeclarationsBySelector(ast)
 
-            const result = []
+      const result = []
 
-            ast.findAllRulesByType('rule', (rule) => {
-                rule.findDeclarationsBySelectors('.a', (declaration, declarationIndex) => {
-                    result.push([declarationIndex, declaration.property, declaration.value])
-                })
-            })
-            const expect = [[0, 'width', '10px'], [1, 'height', '100%']].toString()
-            assert.equal(result, expect)
+      ast.getAllRulesByType('rule', (rule) => {
+        rule.findDeclarationsBySelector('.truncated-text', (declaration, declarationIndex) => {
+          result.push([declarationIndex, declaration.property, declaration.value])
         })
+      })
+      const expect = [[0, 'white-space', 'nowrap'], [1, 'overflow', 'hidden'], [2, 'text-overflow', 'ellipsis']].toString()
+      assert.equal(result, expect)
+    })
 })

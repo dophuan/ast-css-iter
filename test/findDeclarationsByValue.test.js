@@ -1,7 +1,7 @@
 
 const assert = require('assert');
 const css = require('css');
-const findAllRulesByType = require('../src/core/findAllRulesByType');
+const getAllRulesByType = require('../src/core/getAllRulesByType');
 const findDeclarationsByValue = require('../src/core/findDeclarationsByValue');
 
 describe('findDeclarationsByValue()', () => {
@@ -24,15 +24,12 @@ describe('findDeclarationsByValue()', () => {
       }
     `);
 
-    // Add findAllRulesByType method on Object
-    findAllRulesByType(ast);
-
-    // Add findDeclarationsByValue method on Object
+    getAllRulesByType(ast);
     findDeclarationsByValue(ast);
 
     const result = [];
 
-    ast.findAllRulesByType('rule', (rule) => {
+    ast.getAllRulesByType('rule', (rule) => {
 
       rule.findDeclarationsByValue('10px', (declaration, declarationIndex) => {
         result.push([declarationIndex, declaration.property, declaration.value]);

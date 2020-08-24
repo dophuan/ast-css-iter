@@ -1,7 +1,7 @@
-const findAllRulesByType = (rulesRoot) => {
+const getAllRulesByType = (rulesRoot) => {
     const isObject = typeof rulesRoot === 'object';
-    if (!rulesRoot.findAllRulesByType && isObject) {
-        rulesRoot.findAllRulesByType = function (type, callback) {
+    if (!rulesRoot.getAllRulesByType && isObject) {
+        rulesRoot.getAllRulesByType = function (type, callback) {
             const rules = this.stylesheet.rules;
             rules.forEach((rule, indexRule) => {
                 if (rule.type === type) {
@@ -12,4 +12,4 @@ const findAllRulesByType = (rulesRoot) => {
     }
 }
 
-module.exports = findAllRulesByType
+module.exports = getAllRulesByType

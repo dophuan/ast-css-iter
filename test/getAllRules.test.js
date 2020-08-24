@@ -1,8 +1,8 @@
 const assert = require('assert');
 const css = require('css');
-const findAllRules = require('../src/core/findAllRules');
+const getAllRules = require('../src/core/getAllRules');
 
-describe('findAllRules()', () => {
+describe('getAllRules()', () => {
 
   it('Should return a iterations in a list of rules', () => {
 
@@ -15,11 +15,11 @@ describe('findAllRules()', () => {
       }
     `);
 
-    findAllRules(ast)
+    getAllRules(ast)
 
     const result = []
 
-    ast.findAllRules((rule, index) => {
+    ast.getAllRules((rule, index) => {
       result.push([index, rule.type])
     });
 

@@ -1,8 +1,8 @@
 const assert = require('assert')
 const css = require('css')
-const findAllRulesByType = require('../src/core/findAllRulesByType')
+const getAllRulesByType = require('../src/core/getAllRulesByType')
 
-describe('findAllRulesByType()', () => {
+describe('getAllRulesByType()', () => {
 
     const ast = css.parse(`
             @import module.css;
@@ -15,13 +15,13 @@ describe('findAllRulesByType()', () => {
             }
         `)
 
-    findAllRulesByType(ast)
+    getAllRulesByType(ast)
 
     it('Shall return list of iterator filtered by comment', () => {
 
         const result = []
 
-        ast.findAllRulesByType('comment', (rule, index) => {
+        ast.getAllRulesByType('comment', (rule, index) => {
             result.push([index, rule.type])
         })
 
@@ -33,7 +33,7 @@ describe('findAllRulesByType()', () => {
     it('Shall return a list of iterators filtered by import', () => {
         const result = []
 
-        ast.findAllRulesByType('import', (rule, index) => {
+        ast.getAllRulesByType('import', (rule, index) => {
             result.push([index, rule.type])
         })
 
@@ -45,7 +45,7 @@ describe('findAllRulesByType()', () => {
     it('Shall return a list of iterators filtered by rule', () => {
         const result = []
 
-        ast.findAllRulesByType('rule', (rule, index) => {
+        ast.getAllRulesByType('rule', (rule, index) => {
             result.push([index, rule.type])
         })
 
