@@ -36,6 +36,9 @@ $ npm run eslint
 $ npm run test
 ```
 
+## Release
+
+See [Releases](https://github.com/dophuan/ast-css-iter/releases) to see my detailed changelog. 
 ## License
 
-[MIT License](https://github.com/dophuan/ast-css-iter/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
