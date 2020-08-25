@@ -1,6 +1,6 @@
 {
-  "name": "@dophuan/ast-css-iter",
-  "version": "0.1.0",
+  "name": "@ando105/ast-css-iter",
+  "version": "1.0.0",
   "description": "A simple API for iteration on CSS abstract tree",
   "main": "src/index.js",
   "scripts": {
@@ -40,7 +40,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "directories": {
     "test": "test"
