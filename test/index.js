@@ -17,3 +17,6 @@ require('./removeDeclaration.test')
 require('./removeRule.test')
 
 require('./getParam.test')
+require('./getImports.test')
+
+require('./backwardRulesTracer.test')
