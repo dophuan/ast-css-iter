@@ -4,15 +4,15 @@
 
 ## How to install 
 
-``` 
-To be updated
+```sh 
+npm i @ando105/ast-css-iter --save-dev
 ```
 
 ## Example
 
 ```js
 const css = require('css')
-const astIter = require('ast-css-iter')
+const astIter = require('@ando105/ast-css-iter')
 ```
 
 ## Development
