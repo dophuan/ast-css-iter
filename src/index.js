@@ -2,7 +2,7 @@ const getAllRules = require('./core/getAllRules')
 const backwardRulesTracer = require('./core/backwardRulesTracer')
 const getAllRulesByType = require('./core/getAllRulesByType')
 const getAllRulesBySelector = require('./core/getAllRulesBySelector')
-const addRules = require('./core/addRules')
+const addRule = require('./core/addRule')
 const removeRule = require('./core/removeRule')
 const getAllSelectors = require('./core/getAllSelectors')
 const getImports = require('./core/getImports')
@@ -18,8 +18,8 @@ const findDeclarationsByProperty = require('./core/findDeclarationsByProperty')
 const findDeclarationsByValue = require('./core/findDeclarationsByValue')
 
 
-const addDeclarations = require('./core/addDeclarations')
-const removeDeclarations = require('./core/removeDeclarations')
+const addDeclarations = require('./core/addDeclaration')
+const removeDeclarations = require('./core/removeDeclaration')
 const getParam = require('./core/getParam')
 
 const addIterations = (root) => {
@@ -29,7 +29,7 @@ const addIterations = (root) => {
   backwardRulesTracer(root)
   getAllRulesByType(root)
   getAllRulesBySelector(root)
-  addRules(root)
+  addRule(root)
   removeRule(root)
   getAllSelectors(root)
   getImports(root)
@@ -49,6 +49,6 @@ const addIterations = (root) => {
   removeDeclarations(root)
   getParam(root)
 
-};
+}
 
 module.exports = addIterations

@@ -1,6 +1,6 @@
 const assert = require('assert')
 const css = require('css')
-const removeDeclaration = require('../src/core/removeDeclarations')
+const removeDeclaration = require('../src/core/removeDeclaration')
 const getAllRulesByType = require('../src/core/getAllRulesByType')
 const findDeclarationsByProperty = require('../src/core/findDeclarationsByProperty')
 

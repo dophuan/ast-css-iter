@@ -1,9 +1,9 @@
-const getAllDeclarationsBySelectors = (root) => {
+const getAllDeclarationsBySelector = (root) => {
     const isObject = typeof root === 'object'
     const rules = root.stylesheet.rules
     
-    if (!root.getAllDeclarationsBySelectors && isObject) {
-        root.getAllDeclarationsBySelectors = function (selectors, callback) {
+    if (!root.getAllDeclarationsBySelector && isObject) {
+        root.getAllDeclarationsBySelector = function (selectors, callback) {
             rules.forEach((rule) => {
                 if (rule.type === 'rule' & '' + rule.selectors === selectors) {
                     rule.declarations.forEach((declaration) => {
@@ -15,4 +15,4 @@ const getAllDeclarationsBySelectors = (root) => {
     }
 }
 
-module.exports = getAllDeclarationsBySelectors
+module.exports = getAllDeclarationsBySelector

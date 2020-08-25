@@ -1,9 +1,9 @@
-require('./addRules.test')
+require('./addRule.test')
 require('./getAllRules.test')
 require('./getAllRulesBySelector.test')
 require('./getAllRulesByType.test')
 
-require('./addDeclarations.test')
+require('./addDeclaration.test')
 require('./findDeclarations.test')
 require('./findDeclarationsByProperty.test')
 require('./findDeclarationsBySelectors.test')

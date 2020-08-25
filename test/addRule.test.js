@@ -1,6 +1,6 @@
 const assert = require('assert')
 const css = require('css')
-const addRule = require('../src/core/addRules')
+const addRule = require('../src/core/addRule')
 
 describe('addRule()', () => {
   const ast = css.parse(`

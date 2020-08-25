@@ -2,7 +2,7 @@ const assert = require('assert')
 const css = require('css')
 const getAllRulesByType = require('../src/core/getAllRulesByType')
 const findDeclarationsByProperty = require('../src/core/findDeclarationsByProperty')
-const addDeclaration = require('../src/core/addDeclarations')
+const addDeclaration = require('../src/core/addDeclaration')
 
 describe('addDeclaration()', () => {
   it('Should return a CSS with one new property added.', () => {

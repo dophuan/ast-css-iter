@@ -6,12 +6,8 @@ describe('getImports()', () => {
     it('Should return a iterations in a list of import', () => {
         const ast = css.parse(`
         @import module.css;
-        .a {
-            width: 10px;
-        }
-        /* comment */
-        .b {
-            color: #000;
+        .truncated-text {
+            white-space: nowrap;
         }
         `)
        

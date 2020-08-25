@@ -1,8 +1,8 @@
 const assert = require('assert')
 const css = require('css')
-const getAllDeclarationsBySelectors = require('../src/core/getAllDeclarationsBySelector')
+const getAllDeclarationsBySelector = require('../src/core/getAllDeclarationsBySelector')
 
-describe('getAllDeclarationsBySelectors', () => {
+describe('getAllDeclarationsBySelector', () => {
     it('Shall return iterations in a list of declarations filtered by a selector', () => {
         const ast = css.parse(`
             .div {
@@ -16,11 +16,11 @@ describe('getAllDeclarationsBySelectors', () => {
             }
         `)
         
-        getAllDeclarationsBySelectors(ast)
+        getAllDeclarationsBySelector(ast)
 
         const result = []
 
-        ast.getAllDeclarationsBySelectors('.div', (declaration) => {
+        ast.getAllDeclarationsBySelector('.div', (declaration) => {
             result.push([declaration.property, declaration.value])
         })
 
