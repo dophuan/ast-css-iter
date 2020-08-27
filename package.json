@@ -1,6 +1,6 @@
 {
   "name": "@ando105/ast-css-iter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple API for iteration on CSS abstract tree",
   "main": "src/index.js",
   "scripts": {

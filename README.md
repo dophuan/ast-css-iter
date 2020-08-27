@@ -2,6 +2,31 @@
 
 ![Build status](https://github.com/dophuan/ast-css-iter/workflows/Abstract%20Syntax%20Tree%20for%20CSS%20CI/badge.svg)
 
+## Methods
+  ### Stylesheet level
+    - getAllRules
+    - backwardRulesTracer
+    - addRule
+    - addDeclaration
+    - removeRule
+    - getImports
+    - getAllDeclarations
+    - getAllDeclarationsBySelector
+    - getAllDeclarationsByProperty
+    - getAllDeclarationsByValue
+  ### Rule level
+    - findDeclarations
+    - findDeclarationsBySelector
+    - findDeclarationsByProperty
+    - findDeclarationsByValue
+    - getAllRulesBySelector
+    - getAllRulesByType
+  ### Declaration level
+    - addDeclaration
+    - removeDeclaration
+    - getParam
+    - getAllParams
+
 ## How to install 
 
 ```sh 

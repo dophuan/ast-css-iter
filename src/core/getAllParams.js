@@ -6,7 +6,6 @@ const getAllParams = (root) => {
                 rule.declarations.forEach((declaration) => {
                     declaration.getAllParams = function (paramPosition) {
                         const declarationValues = declaration.value.split(' ')  
-                        console.log(declarationValues)
                         return declarationValues
                     }
                 })
