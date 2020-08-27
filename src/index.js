@@ -10,21 +10,17 @@ const getAllDeclarations = require('./core/getAllDeclarations')
 const getAllDeclarationsBySelector = require('./core/getAllDeclarationsBySelector')
 const getAllDeclarationsByProperty = require('./core/getAllDeclarationsByProperty')
 const getAllDeclarationsByValue = require('./core/getAllDeclarationsByValue')
-
-
 const findDeclarations = require('./core/findDeclarations')
 const findDeclarationsBySelector = require('./core/findDeclarationsBySelector')
 const findDeclarationsByProperty = require('./core/findDeclarationsByProperty')
 const findDeclarationsByValue = require('./core/findDeclarationsByValue')
-
-
 const addDeclarations = require('./core/addDeclaration')
 const removeDeclarations = require('./core/removeDeclaration')
 const getParam = require('./core/getParam')
+const getAllParams = require('./core/getAllParams')
 
 const addIterations = (root) => {
 
-  
   getAllRules(root)
   backwardRulesTracer(root)
   getAllRulesByType(root)
@@ -37,18 +33,14 @@ const addIterations = (root) => {
   getAllDeclarationsBySelector(root)
   getAllDeclarationsByProperty(root)
   getAllDeclarationsByValue(root)
-
-  
   findDeclarations(root)
   findDeclarationsBySelector(root)
   findDeclarationsByProperty(root)
   findDeclarationsByValue(root)
-
-  
   addDeclarations(root)
   removeDeclarations(root)
   getParam(root)
-
+  getAllParams(root)
 }
 
 module.exports = addIterations
