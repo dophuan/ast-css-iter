@@ -1,9 +1,11 @@
-# Abstract Syntax Tree extractor
+# :vietnam: Abstract Syntax Tree extractor
 
 ![Build status](https://github.com/dophuan/ast-css-iter/workflows/Abstract%20Syntax%20Tree%20for%20CSS%20CI/badge.svg)
 
 ## Methods
+
   ### Stylesheet level
+
     - getAllRules
     - backwardRulesTracer
     - addRule
@@ -14,14 +16,18 @@
     - getAllDeclarationsBySelector
     - getAllDeclarationsByProperty
     - getAllDeclarationsByValue
+
   ### Rule level
+
     - findDeclarations
     - findDeclarationsBySelector
     - findDeclarationsByProperty
     - findDeclarationsByValue
     - getAllRulesBySelector
     - getAllRulesByType
+
   ### Declaration level
+
     - addDeclaration
     - removeDeclaration
     - getParam
@@ -30,10 +36,10 @@
 ## How to install 
 
 ```sh 
-npm i @ando105/ast-css-iter --save-dev
+$ npm i @ando105/ast-css-iter --save-dev
 ```
 
-## Example
+## Example :cherry_blossom: :fire:
 
 ```js
 const css = require('css')
